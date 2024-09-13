@@ -6,7 +6,6 @@ import MultiplayerGame from './components/MultiplayerGame';
 import Register from './components/Register';
 import Login from './components/Login';
 import NewLobby from './components/NewLobby';
-import WaitingRoom from './components/WaitingRoom';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -74,11 +73,7 @@ function App() {
             <Route 
               path="/lobby" 
               element={isLoggedIn ? <NewLobby token={token} /> : <Navigate to="/login" />} 
-            />
-            <Route 
-              path="/waiting-room/:roomId" 
-              element={isLoggedIn ? <WaitingRoom token={token} /> : <Navigate to="/login" />} 
-            />
+            />            
             <Route 
               path="/room/:roomId" 
               element={isLoggedIn ? <MultiplayerGame token={token} currentUserId={username} /> : <Navigate to="/login" />} 
