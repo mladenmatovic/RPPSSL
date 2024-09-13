@@ -37,12 +37,14 @@ Displays up to 10 recent results
 # Project Structure 
 The project is built using a microservices architecture:
 
-> Frontend: React application
-> Backend Microservices:
+## Frontend
+* React application
 
->> RandomNumber Service
->> Identity Service
->> Game Service
+## Backend Microservices:
+
+* RandomNumber Service
+* Identity Service
+* Game Service
 
 Each component (frontend and each microservice) has its own Dockerfile for containerization.
 
@@ -69,8 +71,8 @@ You can run these tests from the command line interface (CLI) using the followin
 
 4. To run tests for a specific project, use:
 
-	dotnet test src\Services\RPSSL.GameService.Tests\RPSSL.GameService.Tests.csproj
-	dotnet test src\Services\RPSSL.RandomNumberService.Tests\RPSSL.RandomNumberService.Tests.csproj
+	`dotnet test src\Services\RPSSL.GameService.Tests\RPSSL.GameService.Tests.csproj`
+	`dotnet test src\Services\RPSSL.RandomNumberService.Tests\RPSSL.RandomNumberService.Tests.csproj`
 	
 5. The test results will be displayed in the console, showing which tests passed or failed.
 
@@ -92,8 +94,8 @@ You can run these tests from the command line interface (CLI) using the followin
 
 # Technologies Used
 
-> Frontend: React
-> Backend: ASP.NET Core microservices
-> Real-time Communication: SignalR
-> Containerization: Docker
-> Container Orchestration: Docker Compose
+* Frontend: React
+* Backend: ASP.NET Core microservices
+* Real-time Communication: SignalR
+* Containerization: Docker
+* Container Orchestration: Docker Compose
