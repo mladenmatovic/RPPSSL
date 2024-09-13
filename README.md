@@ -6,7 +6,7 @@ Welcome to the Rock Paper Scissors Spock Lizard game! This interactive web appli
 
 ## Home Page
 
-![App's homepage.](/app.png "This is a homepage.")
+![App's homepage.](/app.png#width=300px "This is a homepage.")
 Test API endpoints
 Play against the computer
 View and reset scoreboard (max 10 results)
