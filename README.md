@@ -6,6 +6,7 @@ Welcome to the Rock Paper Scissors Spock Lizard game! This interactive web appli
 
 ## Home Page
 
+![App's homepage.](/app.png "This is a homepage.")
 Test API endpoints
 Play against the computer
 View and reset scoreboard (max 10 results)
@@ -72,7 +73,7 @@ You can run these tests from the command line interface (CLI) using the followin
 4. To run tests for a specific project, use:
 
 	`dotnet test src\Services\RPSSL.GameService.Tests\RPSSL.GameService.Tests.csproj`
-	
+
 	`dotnet test src\Services\RPSSL.RandomNumberService.Tests\RPSSL.RandomNumberService.Tests.csproj`
 	
 5. The test results will be displayed in the console, showing which tests passed or failed.
