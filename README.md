@@ -72,6 +72,7 @@ You can run these tests from the command line interface (CLI) using the followin
 4. To run tests for a specific project, use:
 
 	`dotnet test src\Services\RPSSL.GameService.Tests\RPSSL.GameService.Tests.csproj`
+	
 	`dotnet test src\Services\RPSSL.RandomNumberService.Tests\RPSSL.RandomNumberService.Tests.csproj`
 	
 5. The test results will be displayed in the console, showing which tests passed or failed.
