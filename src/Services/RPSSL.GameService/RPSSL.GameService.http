@@ -1,0 +1,46 @@
+@RPSSL.GameService_HostAddress = https://localhost:7267
+@authToken = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjMwMDEiLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MTA2IiwiZXhwIjoxNzI1OTg2NDgxLCJuYmYiOjE3MjU5NzkyODEsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJtbGFkZW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIxNzQ4N2UzYS0zNGRiLTRmY2YtOWRhMi04YzQ1OTM4ZGFmODEifQ.OR1D4wbEcTkbZVMlU4R1CpJQUmC1FDgKQfxTZUsIwI4
+
+### Test HomePage choices
+GET {{RPSSL.GameService_HostAddress}}/api/choices
+Content-Type: application/json
+
+### Test HomePage choice
+GET {{RPSSL.GameService_HostAddress}}/api/choice
+Content-Type: application/json
+
+
+### Test Create GameLobby play
+GET {{RPSSL.GameService_HostAddress}}/api/play
+Content-Type: application/json
+
+{
+  "Player": 5
+}
+
+### Test Create Game Endpoint
+POST {{RPSSL.GameService_HostAddress}}/api/game
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "player1": "testUser1",
+  "player2": "testUser2"
+}
+
+### Test Get Game Endpoint
+GET {{RPSSL.GameService_HostAddress}}/api/game/1
+Accept: application/json
+Authorization: Bearer {{authToken}}
+
+### Test Make Move Endpoint
+POST {{RPSSL.GameService_HostAddress}}/api/game/1/move
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "playerId": "testUser1",
+  "move": "Rock"
+}
+
+###

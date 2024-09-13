@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - randomnumberservice
+      - identityservice
+      - gameservice      
+
+  randomnumberservice:
+    build:
+      context: .
+      dockerfile: src/Services/RPSSL.RandomNumberService/Dockerfile
+    ports:
+      - "7099:443"
+    environment:
+      - ASPNETCORE_URLS=https://+:443
+      - ASPNETCORE_HTTPS_PORT=7099
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=SecurePassword1234!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    volumes:
+      - ${USERPROFILE}\.aspnet\https:/https/
+
+  identityservice:
+    build:
+      context: .
+      dockerfile: src/Services/RPSSL.IdentityService/Dockerfile
+    ports:
+      - "7106:443"
+    environment:
+      - ASPNETCORE_URLS=https://+:443
+      - ASPNETCORE_HTTPS_PORT=7106
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=SecurePassword1234!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/User.db
+    volumes:
+      - ${USERPROFILE}\.aspnet\https:/https/
+      - ./src/Services/RPSSL.IdentityService/User.db:/app/data/User.db
+
+  gameservice:
+    build:
+      context: .
+      dockerfile: src/Services/RPSSL.GameService/Dockerfile
+    ports:
+      - "7267:443"
+    environment:
+      - ASPNETCORE_URLS=https://+:443
+      - ASPNETCORE_HTTPS_PORT=7267
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=SecurePassword1234!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - RandomNumberService__BaseUrl=https://randomnumberservice:443
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/Games.db
+    volumes:
+      - ${USERPROFILE}\.aspnet\https:/https/
+      - ./src/Services/RPSSL.GameService/Games.db:/app/data/Games.db
+ 

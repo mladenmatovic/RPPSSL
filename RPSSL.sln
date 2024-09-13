@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CB278F1B-01C9-4BD4-81A2-7246167C7F25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{14F0A3B2-6A7F-4D6E-83CE-4F4143A02489}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E54491B3-4EEC-46D7-B220-B4E8690B276F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{FD7F82A6-B9EE-4308-89B0-C0FFB324F42D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSSL.Kafka", "src\Infrastructure\RPSSL.Kafka\RPSSL.Kafka.csproj", "{8ECFE681-E972-498C-B3B9-F962BBC0B057}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSSL.GameService", "src\Services\RPSSL.GameService\RPSSL.GameService.csproj", "{6F37D98B-72C2-493A-A574-AC89A8AD56A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSSL.Shared", "src\Shared\RPSSL.Shared\RPSSL.Shared.csproj", "{1A34F7C7-FBC7-4C07-9514-0A078E55CC4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB8EA435-60B5-47DE-93F0-C397F47A30EF}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSSL.GameService.Tests", "src\Services\RPSSL.GameService.Tests\RPSSL.GameService.Tests.csproj", "{3B248923-6C57-4428-A63F-116353888AC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSSL.RandomNumberService.Tests", "src\Services\RPSSL.RandomNumberService.Tests\RPSSL.RandomNumberService.Tests.csproj", "{93E16D2C-C1F8-4C6C-9297-3BC70CA39635}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSSL.RandomNumberService", "src\Services\RPSSL.RandomNumberService\RPSSL.RandomNumberService.csproj", "{6FCC4853-A50F-4907-9369-C0AD8DA201FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSSL.IdentityService", "src\Services\RPSSL.IdentityService\RPSSL.IdentityService.csproj", "{C115FABC-0BB4-4517-9DC0-3E4B0BBB4AA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8ECFE681-E972-498C-B3B9-F962BBC0B057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ECFE681-E972-498C-B3B9-F962BBC0B057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ECFE681-E972-498C-B3B9-F962BBC0B057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ECFE681-E972-498C-B3B9-F962BBC0B057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F37D98B-72C2-493A-A574-AC89A8AD56A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F37D98B-72C2-493A-A574-AC89A8AD56A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F37D98B-72C2-493A-A574-AC89A8AD56A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F37D98B-72C2-493A-A574-AC89A8AD56A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A34F7C7-FBC7-4C07-9514-0A078E55CC4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A34F7C7-FBC7-4C07-9514-0A078E55CC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A34F7C7-FBC7-4C07-9514-0A078E55CC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A34F7C7-FBC7-4C07-9514-0A078E55CC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B248923-6C57-4428-A63F-116353888AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B248923-6C57-4428-A63F-116353888AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B248923-6C57-4428-A63F-116353888AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B248923-6C57-4428-A63F-116353888AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E16D2C-C1F8-4C6C-9297-3BC70CA39635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E16D2C-C1F8-4C6C-9297-3BC70CA39635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E16D2C-C1F8-4C6C-9297-3BC70CA39635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E16D2C-C1F8-4C6C-9297-3BC70CA39635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FCC4853-A50F-4907-9369-C0AD8DA201FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCC4853-A50F-4907-9369-C0AD8DA201FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCC4853-A50F-4907-9369-C0AD8DA201FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCC4853-A50F-4907-9369-C0AD8DA201FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C115FABC-0BB4-4517-9DC0-3E4B0BBB4AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C115FABC-0BB4-4517-9DC0-3E4B0BBB4AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C115FABC-0BB4-4517-9DC0-3E4B0BBB4AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C115FABC-0BB4-4517-9DC0-3E4B0BBB4AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{14F0A3B2-6A7F-4D6E-83CE-4F4143A02489} = {CB278F1B-01C9-4BD4-81A2-7246167C7F25}
+		{E54491B3-4EEC-46D7-B220-B4E8690B276F} = {CB278F1B-01C9-4BD4-81A2-7246167C7F25}
+		{FD7F82A6-B9EE-4308-89B0-C0FFB324F42D} = {CB278F1B-01C9-4BD4-81A2-7246167C7F25}
+		{8ECFE681-E972-498C-B3B9-F962BBC0B057} = {FD7F82A6-B9EE-4308-89B0-C0FFB324F42D}
+		{6F37D98B-72C2-493A-A574-AC89A8AD56A2} = {14F0A3B2-6A7F-4D6E-83CE-4F4143A02489}
+		{1A34F7C7-FBC7-4C07-9514-0A078E55CC4F} = {E54491B3-4EEC-46D7-B220-B4E8690B276F}
+		{3B248923-6C57-4428-A63F-116353888AC0} = {14F0A3B2-6A7F-4D6E-83CE-4F4143A02489}
+		{93E16D2C-C1F8-4C6C-9297-3BC70CA39635} = {14F0A3B2-6A7F-4D6E-83CE-4F4143A02489}
+		{6FCC4853-A50F-4907-9369-C0AD8DA201FA} = {14F0A3B2-6A7F-4D6E-83CE-4F4143A02489}
+		{C115FABC-0BB4-4517-9DC0-3E4B0BBB4AA2} = {14F0A3B2-6A7F-4D6E-83CE-4F4143A02489}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC61B1D7-C5E5-44F1-9D1D-7206D6B361F4}
+	EndGlobalSection
+EndGlobal
